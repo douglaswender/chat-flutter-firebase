@@ -1,4 +1,4 @@
-import 'package:fern/src/router.dart';
+import 'package:fern/src/core/router/router.dart';
 import 'package:flutter/material.dart';
 
 class App extends StatelessWidget {
@@ -12,8 +12,9 @@ class App extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.green,
       ),
-      routeInformationParser: AppRouter.router.routeInformationParser,
-      routerDelegate: AppRouter.router.routerDelegate,
+      routeInformationProvider: AppRouter().router.routeInformationProvider,
+      routeInformationParser: AppRouter().router.routeInformationParser,
+      routerDelegate: AppRouter().router.routerDelegate,
     );
   }
 }
