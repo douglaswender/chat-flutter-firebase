@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "751879640259",
+    "project_id": "fern-d8b41",
+    "storage_bucket": "fern-d8b41.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:751879640259:android:3e862c4ea9bb2ac904fe76",
+        "android_client_info": {
+          "package_name": "com.example.fern"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "751879640259-ca8endq15khbcp5bs432m1va0mu2b8lm.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB0SHBW7wZ9L7qoFYGoGf9hPkiGEZBIpVU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "751879640259-ca8endq15khbcp5bs432m1va0mu2b8lm.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
