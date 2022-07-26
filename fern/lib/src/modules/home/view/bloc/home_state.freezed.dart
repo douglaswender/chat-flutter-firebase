@@ -18,45 +18,51 @@ final _privateConstructorUsedError = UnsupportedError(
 mixin _$HomeState {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() loading,
     required TResult Function() regular,
+    required TResult Function() loading,
     required TResult Function() empty,
+    required TResult Function() error,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? loading,
     TResult Function()? regular,
+    TResult Function()? loading,
     TResult Function()? empty,
+    TResult Function()? error,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? loading,
     TResult Function()? regular,
+    TResult Function()? loading,
     TResult Function()? empty,
+    TResult Function()? error,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_loading value) loading,
     required TResult Function(_regular value) regular,
+    required TResult Function(_loading value) loading,
     required TResult Function(_empty value) empty,
+    required TResult Function(_error value) error,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(_loading value)? loading,
     TResult Function(_regular value)? regular,
+    TResult Function(_loading value)? loading,
     TResult Function(_empty value)? empty,
+    TResult Function(_error value)? error,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_loading value)? loading,
     TResult Function(_regular value)? regular,
+    TResult Function(_loading value)? loading,
     TResult Function(_empty value)? empty,
+    TResult Function(_error value)? error,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -75,115 +81,6 @@ class _$HomeStateCopyWithImpl<$Res> implements $HomeStateCopyWith<$Res> {
   final HomeState _value;
   // ignore: unused_field
   final $Res Function(HomeState) _then;
-}
-
-/// @nodoc
-abstract class _$$_loadingCopyWith<$Res> {
-  factory _$$_loadingCopyWith(
-          _$_loading value, $Res Function(_$_loading) then) =
-      __$$_loadingCopyWithImpl<$Res>;
-}
-
-/// @nodoc
-class __$$_loadingCopyWithImpl<$Res> extends _$HomeStateCopyWithImpl<$Res>
-    implements _$$_loadingCopyWith<$Res> {
-  __$$_loadingCopyWithImpl(_$_loading _value, $Res Function(_$_loading) _then)
-      : super(_value, (v) => _then(v as _$_loading));
-
-  @override
-  _$_loading get _value => super._value as _$_loading;
-}
-
-/// @nodoc
-
-class _$_loading implements _loading {
-  const _$_loading();
-
-  @override
-  String toString() {
-    return 'HomeState.loading()';
-  }
-
-  @override
-  bool operator ==(dynamic other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$_loading);
-  }
-
-  @override
-  int get hashCode => runtimeType.hashCode;
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() loading,
-    required TResult Function() regular,
-    required TResult Function() empty,
-  }) {
-    return loading();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? loading,
-    TResult Function()? regular,
-    TResult Function()? empty,
-  }) {
-    return loading?.call();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? loading,
-    TResult Function()? regular,
-    TResult Function()? empty,
-    required TResult orElse(),
-  }) {
-    if (loading != null) {
-      return loading();
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(_loading value) loading,
-    required TResult Function(_regular value) regular,
-    required TResult Function(_empty value) empty,
-  }) {
-    return loading(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(_loading value)? loading,
-    TResult Function(_regular value)? regular,
-    TResult Function(_empty value)? empty,
-  }) {
-    return loading?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(_loading value)? loading,
-    TResult Function(_regular value)? regular,
-    TResult Function(_empty value)? empty,
-    required TResult orElse(),
-  }) {
-    if (loading != null) {
-      return loading(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class _loading implements HomeState {
-  const factory _loading() = _$_loading;
 }
 
 /// @nodoc
@@ -225,9 +122,10 @@ class _$_regular implements _regular {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() loading,
     required TResult Function() regular,
+    required TResult Function() loading,
     required TResult Function() empty,
+    required TResult Function() error,
   }) {
     return regular();
   }
@@ -235,9 +133,10 @@ class _$_regular implements _regular {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? loading,
     TResult Function()? regular,
+    TResult Function()? loading,
     TResult Function()? empty,
+    TResult Function()? error,
   }) {
     return regular?.call();
   }
@@ -245,9 +144,10 @@ class _$_regular implements _regular {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? loading,
     TResult Function()? regular,
+    TResult Function()? loading,
     TResult Function()? empty,
+    TResult Function()? error,
     required TResult orElse(),
   }) {
     if (regular != null) {
@@ -259,9 +159,10 @@ class _$_regular implements _regular {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_loading value) loading,
     required TResult Function(_regular value) regular,
+    required TResult Function(_loading value) loading,
     required TResult Function(_empty value) empty,
+    required TResult Function(_error value) error,
   }) {
     return regular(this);
   }
@@ -269,9 +170,10 @@ class _$_regular implements _regular {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(_loading value)? loading,
     TResult Function(_regular value)? regular,
+    TResult Function(_loading value)? loading,
     TResult Function(_empty value)? empty,
+    TResult Function(_error value)? error,
   }) {
     return regular?.call(this);
   }
@@ -279,9 +181,10 @@ class _$_regular implements _regular {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_loading value)? loading,
     TResult Function(_regular value)? regular,
+    TResult Function(_loading value)? loading,
     TResult Function(_empty value)? empty,
+    TResult Function(_error value)? error,
     required TResult orElse(),
   }) {
     if (regular != null) {
@@ -293,6 +196,121 @@ class _$_regular implements _regular {
 
 abstract class _regular implements HomeState {
   const factory _regular() = _$_regular;
+}
+
+/// @nodoc
+abstract class _$$_loadingCopyWith<$Res> {
+  factory _$$_loadingCopyWith(
+          _$_loading value, $Res Function(_$_loading) then) =
+      __$$_loadingCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$_loadingCopyWithImpl<$Res> extends _$HomeStateCopyWithImpl<$Res>
+    implements _$$_loadingCopyWith<$Res> {
+  __$$_loadingCopyWithImpl(_$_loading _value, $Res Function(_$_loading) _then)
+      : super(_value, (v) => _then(v as _$_loading));
+
+  @override
+  _$_loading get _value => super._value as _$_loading;
+}
+
+/// @nodoc
+
+class _$_loading implements _loading {
+  const _$_loading();
+
+  @override
+  String toString() {
+    return 'HomeState.loading()';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$_loading);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() regular,
+    required TResult Function() loading,
+    required TResult Function() empty,
+    required TResult Function() error,
+  }) {
+    return loading();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? regular,
+    TResult Function()? loading,
+    TResult Function()? empty,
+    TResult Function()? error,
+  }) {
+    return loading?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? regular,
+    TResult Function()? loading,
+    TResult Function()? empty,
+    TResult Function()? error,
+    required TResult orElse(),
+  }) {
+    if (loading != null) {
+      return loading();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_regular value) regular,
+    required TResult Function(_loading value) loading,
+    required TResult Function(_empty value) empty,
+    required TResult Function(_error value) error,
+  }) {
+    return loading(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(_regular value)? regular,
+    TResult Function(_loading value)? loading,
+    TResult Function(_empty value)? empty,
+    TResult Function(_error value)? error,
+  }) {
+    return loading?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_regular value)? regular,
+    TResult Function(_loading value)? loading,
+    TResult Function(_empty value)? empty,
+    TResult Function(_error value)? error,
+    required TResult orElse(),
+  }) {
+    if (loading != null) {
+      return loading(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _loading implements HomeState {
+  const factory _loading() = _$_loading;
 }
 
 /// @nodoc
@@ -333,9 +351,10 @@ class _$_empty implements _empty {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() loading,
     required TResult Function() regular,
+    required TResult Function() loading,
     required TResult Function() empty,
+    required TResult Function() error,
   }) {
     return empty();
   }
@@ -343,9 +362,10 @@ class _$_empty implements _empty {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? loading,
     TResult Function()? regular,
+    TResult Function()? loading,
     TResult Function()? empty,
+    TResult Function()? error,
   }) {
     return empty?.call();
   }
@@ -353,9 +373,10 @@ class _$_empty implements _empty {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? loading,
     TResult Function()? regular,
+    TResult Function()? loading,
     TResult Function()? empty,
+    TResult Function()? error,
     required TResult orElse(),
   }) {
     if (empty != null) {
@@ -367,9 +388,10 @@ class _$_empty implements _empty {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_loading value) loading,
     required TResult Function(_regular value) regular,
+    required TResult Function(_loading value) loading,
     required TResult Function(_empty value) empty,
+    required TResult Function(_error value) error,
   }) {
     return empty(this);
   }
@@ -377,9 +399,10 @@ class _$_empty implements _empty {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(_loading value)? loading,
     TResult Function(_regular value)? regular,
+    TResult Function(_loading value)? loading,
     TResult Function(_empty value)? empty,
+    TResult Function(_error value)? error,
   }) {
     return empty?.call(this);
   }
@@ -387,9 +410,10 @@ class _$_empty implements _empty {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_loading value)? loading,
     TResult Function(_regular value)? regular,
+    TResult Function(_loading value)? loading,
     TResult Function(_empty value)? empty,
+    TResult Function(_error value)? error,
     required TResult orElse(),
   }) {
     if (empty != null) {
@@ -401,4 +425,118 @@ class _$_empty implements _empty {
 
 abstract class _empty implements HomeState {
   const factory _empty() = _$_empty;
+}
+
+/// @nodoc
+abstract class _$$_errorCopyWith<$Res> {
+  factory _$$_errorCopyWith(_$_error value, $Res Function(_$_error) then) =
+      __$$_errorCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$_errorCopyWithImpl<$Res> extends _$HomeStateCopyWithImpl<$Res>
+    implements _$$_errorCopyWith<$Res> {
+  __$$_errorCopyWithImpl(_$_error _value, $Res Function(_$_error) _then)
+      : super(_value, (v) => _then(v as _$_error));
+
+  @override
+  _$_error get _value => super._value as _$_error;
+}
+
+/// @nodoc
+
+class _$_error implements _error {
+  const _$_error();
+
+  @override
+  String toString() {
+    return 'HomeState.error()';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$_error);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() regular,
+    required TResult Function() loading,
+    required TResult Function() empty,
+    required TResult Function() error,
+  }) {
+    return error();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? regular,
+    TResult Function()? loading,
+    TResult Function()? empty,
+    TResult Function()? error,
+  }) {
+    return error?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? regular,
+    TResult Function()? loading,
+    TResult Function()? empty,
+    TResult Function()? error,
+    required TResult orElse(),
+  }) {
+    if (error != null) {
+      return error();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_regular value) regular,
+    required TResult Function(_loading value) loading,
+    required TResult Function(_empty value) empty,
+    required TResult Function(_error value) error,
+  }) {
+    return error(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(_regular value)? regular,
+    TResult Function(_loading value)? loading,
+    TResult Function(_empty value)? empty,
+    TResult Function(_error value)? error,
+  }) {
+    return error?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_regular value)? regular,
+    TResult Function(_loading value)? loading,
+    TResult Function(_empty value)? empty,
+    TResult Function(_error value)? error,
+    required TResult orElse(),
+  }) {
+    if (error != null) {
+      return error(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _error implements HomeState {
+  const factory _error() = _$_error;
 }

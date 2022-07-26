@@ -17,7 +17,7 @@ class _HomePageState extends State<HomePage> {
   @override
   void initState() {
     super.initState();
-    bloc.add(const HomeEvent.setup());
+    bloc.add(const HomeEvent.click());
   }
 
   @override
@@ -28,9 +28,9 @@ class _HomePageState extends State<HomePage> {
           bloc: bloc,
           builder: (context, state) {
             if (state == const HomeState.loading()) {
-              return CircularProgressIndicator();
+              return const CircularProgressIndicator();
             } else {
-              return Text('Home');
+              return const Text('Home');
             }
           },
         ),

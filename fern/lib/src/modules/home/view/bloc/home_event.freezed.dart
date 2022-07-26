@@ -18,33 +18,33 @@ final _privateConstructorUsedError = UnsupportedError(
 mixin _$HomeEvent {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() setup,
+    required TResult Function() click,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? setup,
+    TResult Function()? click,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? setup,
+    TResult Function()? click,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_setup value) setup,
+    required TResult Function(_click value) click,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(_setup value)? setup,
+    TResult Function(_click value)? click,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_setup value)? setup,
+    TResult Function(_click value)? click,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -66,35 +66,35 @@ class _$HomeEventCopyWithImpl<$Res> implements $HomeEventCopyWith<$Res> {
 }
 
 /// @nodoc
-abstract class _$$_setupCopyWith<$Res> {
-  factory _$$_setupCopyWith(_$_setup value, $Res Function(_$_setup) then) =
-      __$$_setupCopyWithImpl<$Res>;
+abstract class _$$_clickCopyWith<$Res> {
+  factory _$$_clickCopyWith(_$_click value, $Res Function(_$_click) then) =
+      __$$_clickCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$_setupCopyWithImpl<$Res> extends _$HomeEventCopyWithImpl<$Res>
-    implements _$$_setupCopyWith<$Res> {
-  __$$_setupCopyWithImpl(_$_setup _value, $Res Function(_$_setup) _then)
-      : super(_value, (v) => _then(v as _$_setup));
+class __$$_clickCopyWithImpl<$Res> extends _$HomeEventCopyWithImpl<$Res>
+    implements _$$_clickCopyWith<$Res> {
+  __$$_clickCopyWithImpl(_$_click _value, $Res Function(_$_click) _then)
+      : super(_value, (v) => _then(v as _$_click));
 
   @override
-  _$_setup get _value => super._value as _$_setup;
+  _$_click get _value => super._value as _$_click;
 }
 
 /// @nodoc
 
-class _$_setup implements _setup {
-  const _$_setup();
+class _$_click implements _click {
+  const _$_click();
 
   @override
   String toString() {
-    return 'HomeEvent.setup()';
+    return 'HomeEvent.click()';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$_setup);
+        (other.runtimeType == runtimeType && other is _$_click);
   }
 
   @override
@@ -103,27 +103,27 @@ class _$_setup implements _setup {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() setup,
+    required TResult Function() click,
   }) {
-    return setup();
+    return click();
   }
 
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? setup,
+    TResult Function()? click,
   }) {
-    return setup?.call();
+    return click?.call();
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? setup,
+    TResult Function()? click,
     required TResult orElse(),
   }) {
-    if (setup != null) {
-      return setup();
+    if (click != null) {
+      return click();
     }
     return orElse();
   }
@@ -131,32 +131,32 @@ class _$_setup implements _setup {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_setup value) setup,
+    required TResult Function(_click value) click,
   }) {
-    return setup(this);
+    return click(this);
   }
 
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(_setup value)? setup,
+    TResult Function(_click value)? click,
   }) {
-    return setup?.call(this);
+    return click?.call(this);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_setup value)? setup,
+    TResult Function(_click value)? click,
     required TResult orElse(),
   }) {
-    if (setup != null) {
-      return setup(this);
+    if (click != null) {
+      return click(this);
     }
     return orElse();
   }
 }
 
-abstract class _setup implements HomeEvent {
-  const factory _setup() = _$_setup;
+abstract class _click implements HomeEvent {
+  const factory _click() = _$_click;
 }
