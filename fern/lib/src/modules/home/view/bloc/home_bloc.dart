@@ -10,4 +10,10 @@ class HomeBloc extends Bloc<HomeEvent, HomeState> {
       emit(const HomeState.regular());
     });
   }
+
+  @override
+  void onEvent(HomeEvent event) {
+    super.onEvent(event);
+    print(event);
+  }
 }

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>751879640259-8iik5cq0rpvq2lbap5r9dgviiptakira.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.751879640259-8iik5cq0rpvq2lbap5r9dgviiptakira</string>
+	<key>API_KEY</key>
+	<string>AIzaSyAg_PR4vbmhW90FqSz2nCwUVUNWg_XR0Ag</string>
+	<key>GCM_SENDER_ID</key>
+	<string>751879640259</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.example.fern</string>
+	<key>PROJECT_ID</key>
+	<string>fern-d8b41</string>
+	<key>STORAGE_BUCKET</key>
+	<string>fern-d8b41.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:751879640259:ios:03386e2bf4cd59b404fe76</string>
+</dict>
+</plist>

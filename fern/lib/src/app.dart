@@ -12,9 +12,9 @@ class App extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.green,
       ),
-      routeInformationProvider: AppRouter().router.routeInformationProvider,
-      routeInformationParser: AppRouter().router.routeInformationParser,
-      routerDelegate: AppRouter().router.routerDelegate,
+      routeInformationProvider: AppRouter.routeInformationProvider,
+      routeInformationParser: AppRouter.routeInformationParser,
+      routerDelegate: AppRouter.routerDelegate,
     );
   }
 }

@@ -29,6 +29,13 @@
             {
               "client_id": "751879640259-ca8endq15khbcp5bs432m1va0mu2b8lm.apps.googleusercontent.com",
               "client_type": 3
+            },
+            {
+              "client_id": "751879640259-8iik5cq0rpvq2lbap5r9dgviiptakira.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.fern"
+              }
             }
           ]
         }
