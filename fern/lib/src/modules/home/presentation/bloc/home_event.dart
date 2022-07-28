@@ -3,5 +3,8 @@ part 'home_event.freezed.dart';
 
 @freezed
 abstract class HomeEvent with _$HomeEvent {
-  const factory HomeEvent.click() = _click;
+  const factory HomeEvent.init({
+    String? password,
+    String? email,
+  }) = HomeEventInit;
 }
