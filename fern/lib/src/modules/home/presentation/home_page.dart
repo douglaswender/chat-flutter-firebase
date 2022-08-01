@@ -1,3 +1,4 @@
+import 'package:fern/src/core/utils/date_extension.dart';
 import 'package:fern/src/modules/home/domain/entities/chat.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -21,27 +22,6 @@ class _HomePageState extends State<HomePage> {
 
   Stream<List<Chat>>? chats;
 
-  // <Chat>[
-  //   Chat(
-  //     id: '1',
-  //     name: 'Neide',
-  //     messages: [
-  //       Message(text: 'Oi', date: '29/07/2022', sender: false),
-  //       Message(text: 'Oiê!', date: '29/07/2022', sender: true),
-  //     ],
-  //   ),
-  //   Chat(
-  //     id: '2',
-  //     name: 'Douglas',
-  //     messages: [Message(text: 'Oi', date: '29/07/2022', sender: true)],
-  //   ),
-  //   Chat(
-  //     id: '3',
-  //     name: 'Giovana',
-  //     messages: [Message(text: 'Oi', date: '29/07/2022', sender: false)],
-  //   ),
-  // ];
-
   @override
   void initState() {
     super.initState();
@@ -51,7 +31,6 @@ class _HomePageState extends State<HomePage> {
       } else if (state is HomeStateLoading) {
         print('loading');
       } else if (state is HomeStateRegular) {
-        print(state.chat);
         chats = state.chat;
         print('regular');
       } else {
@@ -76,6 +55,9 @@ class _HomePageState extends State<HomePage> {
                 if (state is HomeStateLoading) {
                   return const Expanded(
                       child: Center(child: CircularProgressIndicator()));
+                } else if (state is HomeStateEmpty) {
+                  return const Expanded(
+                      child: Center(child: Text('Não há mensagens!')));
                 } else {
                   return StreamBuilder(
                     stream: chats,
@@ -94,11 +76,9 @@ class _HomePageState extends State<HomePage> {
                                     ? '$name: ${data[index].messages.last.text}'
                                     : '${data[index].name}: ${data[index].messages.last.text}',
                               ),
-                              trailing: Text(data[index]
-                                  .messages[0]
-                                  .date
-                                  .toDate()
-                                  .toString()),
+                              trailing: Text(
+                                data[index].messages[0].date.toDate().format,
+                              ),
                               onTap: () =>
                                   context.push('/chat', extra: data[index]),
                             ),

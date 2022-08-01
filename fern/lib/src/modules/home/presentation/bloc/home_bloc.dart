@@ -6,29 +6,27 @@ import 'home_event.dart';
 import 'home_state.dart';
 
 class HomeBloc extends Bloc<HomeEvent, HomeState> {
-  HomeBloc() : super(const HomeState.empty()) {
+  HomeBloc() : super(const HomeState.loading()) {
     on<HomeEvent>((event, emit) async {
-      emit(const HomeState.loading());
+      //await Future.delayed(const Duration(seconds: 2));
 
       await event.when(
         init: (id) async {
-          print(id);
-          await Future.delayed(const Duration(seconds: 2));
+          emit(const HomeState.loading());
           final getChat = getIt.get<GetChat>();
-
-          final result = await getChat(id: id);
-
-          print(result.first);
-
-          emit(HomeState.regular(chat: result));
+          try {
+            final result = await getChat(id: id);
+            if (await result.isEmpty) {
+              print('empty bloc');
+              emit(const HomeStateEmpty());
+            } else {
+              emit(HomeState.regular(chat: result));
+            }
+          } catch (e) {
+            emit(const HomeStateError());
+          }
         },
       );
     });
   }
-
-  // @override
-  // void onEvent(HomeEvent event) {
-  //   super.onEvent(event);
-  //   print(event);
-  // }
 }

@@ -10,6 +10,6 @@ class ChatRepositoryImpl extends ChatRepository {
 
   @override
   Future<Stream<List<Chat>>> getMessages({required String id}) async {
-    return datasource.getChat(id: id);
+    return await datasource.getChat(id: id);
   }
 }

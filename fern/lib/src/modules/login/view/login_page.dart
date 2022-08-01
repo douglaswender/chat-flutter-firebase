@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:go_router/go_router.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({Key? key}) : super(key: key);
@@ -21,7 +20,7 @@ class _LoginPageState extends State<LoginPage> {
           onPressed: () {
             //GoRouter.of(context).pop();
           },
-          child: Text('Login'),
+          child: const Text('Login'),
         ),
       ),
     );
