@@ -18,7 +18,7 @@ final _privateConstructorUsedError = UnsupportedError(
 mixin _$HomeState {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() regular,
+    required TResult Function(Stream<List<Chat>> chat) regular,
     required TResult Function() loading,
     required TResult Function() empty,
     required TResult Function() error,
@@ -27,7 +27,7 @@ mixin _$HomeState {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? regular,
+    TResult Function(Stream<List<Chat>> chat)? regular,
     TResult Function()? loading,
     TResult Function()? empty,
     TResult Function()? error,
@@ -36,7 +36,7 @@ mixin _$HomeState {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? regular,
+    TResult Function(Stream<List<Chat>> chat)? regular,
     TResult Function()? loading,
     TResult Function()? empty,
     TResult Function()? error,
@@ -46,29 +46,29 @@ mixin _$HomeState {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(regular value) regular,
-    required TResult Function(loading value) loading,
-    required TResult Function(empty value) empty,
-    required TResult Function(error value) error,
-    required TResult Function(unauthenticated value) unauthenticated,
+    required TResult Function(HomeStateRegular value) regular,
+    required TResult Function(HomeStateLoading value) loading,
+    required TResult Function(HomeStateEmpty value) empty,
+    required TResult Function(HomeStateError value) error,
+    required TResult Function(HomeStateUnauthenticated value) unauthenticated,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(regular value)? regular,
-    TResult Function(loading value)? loading,
-    TResult Function(empty value)? empty,
-    TResult Function(error value)? error,
-    TResult Function(unauthenticated value)? unauthenticated,
+    TResult Function(HomeStateRegular value)? regular,
+    TResult Function(HomeStateLoading value)? loading,
+    TResult Function(HomeStateEmpty value)? empty,
+    TResult Function(HomeStateError value)? error,
+    TResult Function(HomeStateUnauthenticated value)? unauthenticated,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(regular value)? regular,
-    TResult Function(loading value)? loading,
-    TResult Function(empty value)? empty,
-    TResult Function(error value)? error,
-    TResult Function(unauthenticated value)? unauthenticated,
+    TResult Function(HomeStateRegular value)? regular,
+    TResult Function(HomeStateLoading value)? loading,
+    TResult Function(HomeStateEmpty value)? empty,
+    TResult Function(HomeStateError value)? error,
+    TResult Function(HomeStateUnauthenticated value)? unauthenticated,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -90,68 +90,95 @@ class _$HomeStateCopyWithImpl<$Res> implements $HomeStateCopyWith<$Res> {
 }
 
 /// @nodoc
-abstract class _$$regularCopyWith<$Res> {
-  factory _$$regularCopyWith(_$regular value, $Res Function(_$regular) then) =
-      __$$regularCopyWithImpl<$Res>;
+abstract class _$$HomeStateRegularCopyWith<$Res> {
+  factory _$$HomeStateRegularCopyWith(
+          _$HomeStateRegular value, $Res Function(_$HomeStateRegular) then) =
+      __$$HomeStateRegularCopyWithImpl<$Res>;
+  $Res call({Stream<List<Chat>> chat});
 }
 
 /// @nodoc
-class __$$regularCopyWithImpl<$Res> extends _$HomeStateCopyWithImpl<$Res>
-    implements _$$regularCopyWith<$Res> {
-  __$$regularCopyWithImpl(_$regular _value, $Res Function(_$regular) _then)
-      : super(_value, (v) => _then(v as _$regular));
+class __$$HomeStateRegularCopyWithImpl<$Res>
+    extends _$HomeStateCopyWithImpl<$Res>
+    implements _$$HomeStateRegularCopyWith<$Res> {
+  __$$HomeStateRegularCopyWithImpl(
+      _$HomeStateRegular _value, $Res Function(_$HomeStateRegular) _then)
+      : super(_value, (v) => _then(v as _$HomeStateRegular));
 
   @override
-  _$regular get _value => super._value as _$regular;
+  _$HomeStateRegular get _value => super._value as _$HomeStateRegular;
+
+  @override
+  $Res call({
+    Object? chat = freezed,
+  }) {
+    return _then(_$HomeStateRegular(
+      chat: chat == freezed
+          ? _value.chat
+          : chat // ignore: cast_nullable_to_non_nullable
+              as Stream<List<Chat>>,
+    ));
+  }
 }
 
 /// @nodoc
 
-class _$regular implements regular {
-  const _$regular();
+class _$HomeStateRegular implements HomeStateRegular {
+  const _$HomeStateRegular({required this.chat});
+
+  @override
+  final Stream<List<Chat>> chat;
 
   @override
   String toString() {
-    return 'HomeState.regular()';
+    return 'HomeState.regular(chat: $chat)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$regular);
+        (other.runtimeType == runtimeType &&
+            other is _$HomeStateRegular &&
+            const DeepCollectionEquality().equals(other.chat, chat));
   }
 
   @override
-  int get hashCode => runtimeType.hashCode;
+  int get hashCode =>
+      Object.hash(runtimeType, const DeepCollectionEquality().hash(chat));
+
+  @JsonKey(ignore: true)
+  @override
+  _$$HomeStateRegularCopyWith<_$HomeStateRegular> get copyWith =>
+      __$$HomeStateRegularCopyWithImpl<_$HomeStateRegular>(this, _$identity);
 
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() regular,
+    required TResult Function(Stream<List<Chat>> chat) regular,
     required TResult Function() loading,
     required TResult Function() empty,
     required TResult Function() error,
     required TResult Function() unauthenticated,
   }) {
-    return regular();
+    return regular(chat);
   }
 
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? regular,
+    TResult Function(Stream<List<Chat>> chat)? regular,
     TResult Function()? loading,
     TResult Function()? empty,
     TResult Function()? error,
     TResult Function()? unauthenticated,
   }) {
-    return regular?.call();
+    return regular?.call(chat);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? regular,
+    TResult Function(Stream<List<Chat>> chat)? regular,
     TResult Function()? loading,
     TResult Function()? empty,
     TResult Function()? error,
@@ -159,7 +186,7 @@ class _$regular implements regular {
     required TResult orElse(),
   }) {
     if (regular != null) {
-      return regular();
+      return regular(chat);
     }
     return orElse();
   }
@@ -167,11 +194,11 @@ class _$regular implements regular {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(regular value) regular,
-    required TResult Function(loading value) loading,
-    required TResult Function(empty value) empty,
-    required TResult Function(error value) error,
-    required TResult Function(unauthenticated value) unauthenticated,
+    required TResult Function(HomeStateRegular value) regular,
+    required TResult Function(HomeStateLoading value) loading,
+    required TResult Function(HomeStateEmpty value) empty,
+    required TResult Function(HomeStateError value) error,
+    required TResult Function(HomeStateUnauthenticated value) unauthenticated,
   }) {
     return regular(this);
   }
@@ -179,11 +206,11 @@ class _$regular implements regular {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(regular value)? regular,
-    TResult Function(loading value)? loading,
-    TResult Function(empty value)? empty,
-    TResult Function(error value)? error,
-    TResult Function(unauthenticated value)? unauthenticated,
+    TResult Function(HomeStateRegular value)? regular,
+    TResult Function(HomeStateLoading value)? loading,
+    TResult Function(HomeStateEmpty value)? empty,
+    TResult Function(HomeStateError value)? error,
+    TResult Function(HomeStateUnauthenticated value)? unauthenticated,
   }) {
     return regular?.call(this);
   }
@@ -191,11 +218,11 @@ class _$regular implements regular {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(regular value)? regular,
-    TResult Function(loading value)? loading,
-    TResult Function(empty value)? empty,
-    TResult Function(error value)? error,
-    TResult Function(unauthenticated value)? unauthenticated,
+    TResult Function(HomeStateRegular value)? regular,
+    TResult Function(HomeStateLoading value)? loading,
+    TResult Function(HomeStateEmpty value)? empty,
+    TResult Function(HomeStateError value)? error,
+    TResult Function(HomeStateUnauthenticated value)? unauthenticated,
     required TResult orElse(),
   }) {
     if (regular != null) {
@@ -205,30 +232,39 @@ class _$regular implements regular {
   }
 }
 
-abstract class regular implements HomeState {
-  const factory regular() = _$regular;
+abstract class HomeStateRegular implements HomeState {
+  const factory HomeStateRegular({required final Stream<List<Chat>> chat}) =
+      _$HomeStateRegular;
+
+  Stream<List<Chat>> get chat;
+  @JsonKey(ignore: true)
+  _$$HomeStateRegularCopyWith<_$HomeStateRegular> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$loadingCopyWith<$Res> {
-  factory _$$loadingCopyWith(_$loading value, $Res Function(_$loading) then) =
-      __$$loadingCopyWithImpl<$Res>;
+abstract class _$$HomeStateLoadingCopyWith<$Res> {
+  factory _$$HomeStateLoadingCopyWith(
+          _$HomeStateLoading value, $Res Function(_$HomeStateLoading) then) =
+      __$$HomeStateLoadingCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$loadingCopyWithImpl<$Res> extends _$HomeStateCopyWithImpl<$Res>
-    implements _$$loadingCopyWith<$Res> {
-  __$$loadingCopyWithImpl(_$loading _value, $Res Function(_$loading) _then)
-      : super(_value, (v) => _then(v as _$loading));
+class __$$HomeStateLoadingCopyWithImpl<$Res>
+    extends _$HomeStateCopyWithImpl<$Res>
+    implements _$$HomeStateLoadingCopyWith<$Res> {
+  __$$HomeStateLoadingCopyWithImpl(
+      _$HomeStateLoading _value, $Res Function(_$HomeStateLoading) _then)
+      : super(_value, (v) => _then(v as _$HomeStateLoading));
 
   @override
-  _$loading get _value => super._value as _$loading;
+  _$HomeStateLoading get _value => super._value as _$HomeStateLoading;
 }
 
 /// @nodoc
 
-class _$loading implements loading {
-  const _$loading();
+class _$HomeStateLoading implements HomeStateLoading {
+  const _$HomeStateLoading();
 
   @override
   String toString() {
@@ -238,7 +274,7 @@ class _$loading implements loading {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$loading);
+        (other.runtimeType == runtimeType && other is _$HomeStateLoading);
   }
 
   @override
@@ -247,7 +283,7 @@ class _$loading implements loading {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() regular,
+    required TResult Function(Stream<List<Chat>> chat) regular,
     required TResult Function() loading,
     required TResult Function() empty,
     required TResult Function() error,
@@ -259,7 +295,7 @@ class _$loading implements loading {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? regular,
+    TResult Function(Stream<List<Chat>> chat)? regular,
     TResult Function()? loading,
     TResult Function()? empty,
     TResult Function()? error,
@@ -271,7 +307,7 @@ class _$loading implements loading {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? regular,
+    TResult Function(Stream<List<Chat>> chat)? regular,
     TResult Function()? loading,
     TResult Function()? empty,
     TResult Function()? error,
@@ -287,11 +323,11 @@ class _$loading implements loading {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(regular value) regular,
-    required TResult Function(loading value) loading,
-    required TResult Function(empty value) empty,
-    required TResult Function(error value) error,
-    required TResult Function(unauthenticated value) unauthenticated,
+    required TResult Function(HomeStateRegular value) regular,
+    required TResult Function(HomeStateLoading value) loading,
+    required TResult Function(HomeStateEmpty value) empty,
+    required TResult Function(HomeStateError value) error,
+    required TResult Function(HomeStateUnauthenticated value) unauthenticated,
   }) {
     return loading(this);
   }
@@ -299,11 +335,11 @@ class _$loading implements loading {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(regular value)? regular,
-    TResult Function(loading value)? loading,
-    TResult Function(empty value)? empty,
-    TResult Function(error value)? error,
-    TResult Function(unauthenticated value)? unauthenticated,
+    TResult Function(HomeStateRegular value)? regular,
+    TResult Function(HomeStateLoading value)? loading,
+    TResult Function(HomeStateEmpty value)? empty,
+    TResult Function(HomeStateError value)? error,
+    TResult Function(HomeStateUnauthenticated value)? unauthenticated,
   }) {
     return loading?.call(this);
   }
@@ -311,11 +347,11 @@ class _$loading implements loading {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(regular value)? regular,
-    TResult Function(loading value)? loading,
-    TResult Function(empty value)? empty,
-    TResult Function(error value)? error,
-    TResult Function(unauthenticated value)? unauthenticated,
+    TResult Function(HomeStateRegular value)? regular,
+    TResult Function(HomeStateLoading value)? loading,
+    TResult Function(HomeStateEmpty value)? empty,
+    TResult Function(HomeStateError value)? error,
+    TResult Function(HomeStateUnauthenticated value)? unauthenticated,
     required TResult orElse(),
   }) {
     if (loading != null) {
@@ -325,30 +361,32 @@ class _$loading implements loading {
   }
 }
 
-abstract class loading implements HomeState {
-  const factory loading() = _$loading;
+abstract class HomeStateLoading implements HomeState {
+  const factory HomeStateLoading() = _$HomeStateLoading;
 }
 
 /// @nodoc
-abstract class _$$emptyCopyWith<$Res> {
-  factory _$$emptyCopyWith(_$empty value, $Res Function(_$empty) then) =
-      __$$emptyCopyWithImpl<$Res>;
+abstract class _$$HomeStateEmptyCopyWith<$Res> {
+  factory _$$HomeStateEmptyCopyWith(
+          _$HomeStateEmpty value, $Res Function(_$HomeStateEmpty) then) =
+      __$$HomeStateEmptyCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$emptyCopyWithImpl<$Res> extends _$HomeStateCopyWithImpl<$Res>
-    implements _$$emptyCopyWith<$Res> {
-  __$$emptyCopyWithImpl(_$empty _value, $Res Function(_$empty) _then)
-      : super(_value, (v) => _then(v as _$empty));
+class __$$HomeStateEmptyCopyWithImpl<$Res> extends _$HomeStateCopyWithImpl<$Res>
+    implements _$$HomeStateEmptyCopyWith<$Res> {
+  __$$HomeStateEmptyCopyWithImpl(
+      _$HomeStateEmpty _value, $Res Function(_$HomeStateEmpty) _then)
+      : super(_value, (v) => _then(v as _$HomeStateEmpty));
 
   @override
-  _$empty get _value => super._value as _$empty;
+  _$HomeStateEmpty get _value => super._value as _$HomeStateEmpty;
 }
 
 /// @nodoc
 
-class _$empty implements empty {
-  const _$empty();
+class _$HomeStateEmpty implements HomeStateEmpty {
+  const _$HomeStateEmpty();
 
   @override
   String toString() {
@@ -358,7 +396,7 @@ class _$empty implements empty {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$empty);
+        (other.runtimeType == runtimeType && other is _$HomeStateEmpty);
   }
 
   @override
@@ -367,7 +405,7 @@ class _$empty implements empty {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() regular,
+    required TResult Function(Stream<List<Chat>> chat) regular,
     required TResult Function() loading,
     required TResult Function() empty,
     required TResult Function() error,
@@ -379,7 +417,7 @@ class _$empty implements empty {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? regular,
+    TResult Function(Stream<List<Chat>> chat)? regular,
     TResult Function()? loading,
     TResult Function()? empty,
     TResult Function()? error,
@@ -391,7 +429,7 @@ class _$empty implements empty {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? regular,
+    TResult Function(Stream<List<Chat>> chat)? regular,
     TResult Function()? loading,
     TResult Function()? empty,
     TResult Function()? error,
@@ -407,11 +445,11 @@ class _$empty implements empty {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(regular value) regular,
-    required TResult Function(loading value) loading,
-    required TResult Function(empty value) empty,
-    required TResult Function(error value) error,
-    required TResult Function(unauthenticated value) unauthenticated,
+    required TResult Function(HomeStateRegular value) regular,
+    required TResult Function(HomeStateLoading value) loading,
+    required TResult Function(HomeStateEmpty value) empty,
+    required TResult Function(HomeStateError value) error,
+    required TResult Function(HomeStateUnauthenticated value) unauthenticated,
   }) {
     return empty(this);
   }
@@ -419,11 +457,11 @@ class _$empty implements empty {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(regular value)? regular,
-    TResult Function(loading value)? loading,
-    TResult Function(empty value)? empty,
-    TResult Function(error value)? error,
-    TResult Function(unauthenticated value)? unauthenticated,
+    TResult Function(HomeStateRegular value)? regular,
+    TResult Function(HomeStateLoading value)? loading,
+    TResult Function(HomeStateEmpty value)? empty,
+    TResult Function(HomeStateError value)? error,
+    TResult Function(HomeStateUnauthenticated value)? unauthenticated,
   }) {
     return empty?.call(this);
   }
@@ -431,11 +469,11 @@ class _$empty implements empty {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(regular value)? regular,
-    TResult Function(loading value)? loading,
-    TResult Function(empty value)? empty,
-    TResult Function(error value)? error,
-    TResult Function(unauthenticated value)? unauthenticated,
+    TResult Function(HomeStateRegular value)? regular,
+    TResult Function(HomeStateLoading value)? loading,
+    TResult Function(HomeStateEmpty value)? empty,
+    TResult Function(HomeStateError value)? error,
+    TResult Function(HomeStateUnauthenticated value)? unauthenticated,
     required TResult orElse(),
   }) {
     if (empty != null) {
@@ -445,30 +483,32 @@ class _$empty implements empty {
   }
 }
 
-abstract class empty implements HomeState {
-  const factory empty() = _$empty;
+abstract class HomeStateEmpty implements HomeState {
+  const factory HomeStateEmpty() = _$HomeStateEmpty;
 }
 
 /// @nodoc
-abstract class _$$errorCopyWith<$Res> {
-  factory _$$errorCopyWith(_$error value, $Res Function(_$error) then) =
-      __$$errorCopyWithImpl<$Res>;
+abstract class _$$HomeStateErrorCopyWith<$Res> {
+  factory _$$HomeStateErrorCopyWith(
+          _$HomeStateError value, $Res Function(_$HomeStateError) then) =
+      __$$HomeStateErrorCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$errorCopyWithImpl<$Res> extends _$HomeStateCopyWithImpl<$Res>
-    implements _$$errorCopyWith<$Res> {
-  __$$errorCopyWithImpl(_$error _value, $Res Function(_$error) _then)
-      : super(_value, (v) => _then(v as _$error));
+class __$$HomeStateErrorCopyWithImpl<$Res> extends _$HomeStateCopyWithImpl<$Res>
+    implements _$$HomeStateErrorCopyWith<$Res> {
+  __$$HomeStateErrorCopyWithImpl(
+      _$HomeStateError _value, $Res Function(_$HomeStateError) _then)
+      : super(_value, (v) => _then(v as _$HomeStateError));
 
   @override
-  _$error get _value => super._value as _$error;
+  _$HomeStateError get _value => super._value as _$HomeStateError;
 }
 
 /// @nodoc
 
-class _$error implements error {
-  const _$error();
+class _$HomeStateError implements HomeStateError {
+  const _$HomeStateError();
 
   @override
   String toString() {
@@ -478,7 +518,7 @@ class _$error implements error {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$error);
+        (other.runtimeType == runtimeType && other is _$HomeStateError);
   }
 
   @override
@@ -487,7 +527,7 @@ class _$error implements error {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() regular,
+    required TResult Function(Stream<List<Chat>> chat) regular,
     required TResult Function() loading,
     required TResult Function() empty,
     required TResult Function() error,
@@ -499,7 +539,7 @@ class _$error implements error {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? regular,
+    TResult Function(Stream<List<Chat>> chat)? regular,
     TResult Function()? loading,
     TResult Function()? empty,
     TResult Function()? error,
@@ -511,7 +551,7 @@ class _$error implements error {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? regular,
+    TResult Function(Stream<List<Chat>> chat)? regular,
     TResult Function()? loading,
     TResult Function()? empty,
     TResult Function()? error,
@@ -527,11 +567,11 @@ class _$error implements error {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(regular value) regular,
-    required TResult Function(loading value) loading,
-    required TResult Function(empty value) empty,
-    required TResult Function(error value) error,
-    required TResult Function(unauthenticated value) unauthenticated,
+    required TResult Function(HomeStateRegular value) regular,
+    required TResult Function(HomeStateLoading value) loading,
+    required TResult Function(HomeStateEmpty value) empty,
+    required TResult Function(HomeStateError value) error,
+    required TResult Function(HomeStateUnauthenticated value) unauthenticated,
   }) {
     return error(this);
   }
@@ -539,11 +579,11 @@ class _$error implements error {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(regular value)? regular,
-    TResult Function(loading value)? loading,
-    TResult Function(empty value)? empty,
-    TResult Function(error value)? error,
-    TResult Function(unauthenticated value)? unauthenticated,
+    TResult Function(HomeStateRegular value)? regular,
+    TResult Function(HomeStateLoading value)? loading,
+    TResult Function(HomeStateEmpty value)? empty,
+    TResult Function(HomeStateError value)? error,
+    TResult Function(HomeStateUnauthenticated value)? unauthenticated,
   }) {
     return error?.call(this);
   }
@@ -551,11 +591,11 @@ class _$error implements error {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(regular value)? regular,
-    TResult Function(loading value)? loading,
-    TResult Function(empty value)? empty,
-    TResult Function(error value)? error,
-    TResult Function(unauthenticated value)? unauthenticated,
+    TResult Function(HomeStateRegular value)? regular,
+    TResult Function(HomeStateLoading value)? loading,
+    TResult Function(HomeStateEmpty value)? empty,
+    TResult Function(HomeStateError value)? error,
+    TResult Function(HomeStateUnauthenticated value)? unauthenticated,
     required TResult orElse(),
   }) {
     if (error != null) {
@@ -565,33 +605,34 @@ class _$error implements error {
   }
 }
 
-abstract class error implements HomeState {
-  const factory error() = _$error;
+abstract class HomeStateError implements HomeState {
+  const factory HomeStateError() = _$HomeStateError;
 }
 
 /// @nodoc
-abstract class _$$unauthenticatedCopyWith<$Res> {
-  factory _$$unauthenticatedCopyWith(
-          _$unauthenticated value, $Res Function(_$unauthenticated) then) =
-      __$$unauthenticatedCopyWithImpl<$Res>;
+abstract class _$$HomeStateUnauthenticatedCopyWith<$Res> {
+  factory _$$HomeStateUnauthenticatedCopyWith(_$HomeStateUnauthenticated value,
+          $Res Function(_$HomeStateUnauthenticated) then) =
+      __$$HomeStateUnauthenticatedCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$unauthenticatedCopyWithImpl<$Res>
+class __$$HomeStateUnauthenticatedCopyWithImpl<$Res>
     extends _$HomeStateCopyWithImpl<$Res>
-    implements _$$unauthenticatedCopyWith<$Res> {
-  __$$unauthenticatedCopyWithImpl(
-      _$unauthenticated _value, $Res Function(_$unauthenticated) _then)
-      : super(_value, (v) => _then(v as _$unauthenticated));
+    implements _$$HomeStateUnauthenticatedCopyWith<$Res> {
+  __$$HomeStateUnauthenticatedCopyWithImpl(_$HomeStateUnauthenticated _value,
+      $Res Function(_$HomeStateUnauthenticated) _then)
+      : super(_value, (v) => _then(v as _$HomeStateUnauthenticated));
 
   @override
-  _$unauthenticated get _value => super._value as _$unauthenticated;
+  _$HomeStateUnauthenticated get _value =>
+      super._value as _$HomeStateUnauthenticated;
 }
 
 /// @nodoc
 
-class _$unauthenticated implements unauthenticated {
-  const _$unauthenticated();
+class _$HomeStateUnauthenticated implements HomeStateUnauthenticated {
+  const _$HomeStateUnauthenticated();
 
   @override
   String toString() {
@@ -601,7 +642,8 @@ class _$unauthenticated implements unauthenticated {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$unauthenticated);
+        (other.runtimeType == runtimeType &&
+            other is _$HomeStateUnauthenticated);
   }
 
   @override
@@ -610,7 +652,7 @@ class _$unauthenticated implements unauthenticated {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() regular,
+    required TResult Function(Stream<List<Chat>> chat) regular,
     required TResult Function() loading,
     required TResult Function() empty,
     required TResult Function() error,
@@ -622,7 +664,7 @@ class _$unauthenticated implements unauthenticated {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? regular,
+    TResult Function(Stream<List<Chat>> chat)? regular,
     TResult Function()? loading,
     TResult Function()? empty,
     TResult Function()? error,
@@ -634,7 +676,7 @@ class _$unauthenticated implements unauthenticated {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? regular,
+    TResult Function(Stream<List<Chat>> chat)? regular,
     TResult Function()? loading,
     TResult Function()? empty,
     TResult Function()? error,
@@ -650,11 +692,11 @@ class _$unauthenticated implements unauthenticated {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(regular value) regular,
-    required TResult Function(loading value) loading,
-    required TResult Function(empty value) empty,
-    required TResult Function(error value) error,
-    required TResult Function(unauthenticated value) unauthenticated,
+    required TResult Function(HomeStateRegular value) regular,
+    required TResult Function(HomeStateLoading value) loading,
+    required TResult Function(HomeStateEmpty value) empty,
+    required TResult Function(HomeStateError value) error,
+    required TResult Function(HomeStateUnauthenticated value) unauthenticated,
   }) {
     return unauthenticated(this);
   }
@@ -662,11 +704,11 @@ class _$unauthenticated implements unauthenticated {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(regular value)? regular,
-    TResult Function(loading value)? loading,
-    TResult Function(empty value)? empty,
-    TResult Function(error value)? error,
-    TResult Function(unauthenticated value)? unauthenticated,
+    TResult Function(HomeStateRegular value)? regular,
+    TResult Function(HomeStateLoading value)? loading,
+    TResult Function(HomeStateEmpty value)? empty,
+    TResult Function(HomeStateError value)? error,
+    TResult Function(HomeStateUnauthenticated value)? unauthenticated,
   }) {
     return unauthenticated?.call(this);
   }
@@ -674,11 +716,11 @@ class _$unauthenticated implements unauthenticated {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(regular value)? regular,
-    TResult Function(loading value)? loading,
-    TResult Function(empty value)? empty,
-    TResult Function(error value)? error,
-    TResult Function(unauthenticated value)? unauthenticated,
+    TResult Function(HomeStateRegular value)? regular,
+    TResult Function(HomeStateLoading value)? loading,
+    TResult Function(HomeStateEmpty value)? empty,
+    TResult Function(HomeStateError value)? error,
+    TResult Function(HomeStateUnauthenticated value)? unauthenticated,
     required TResult orElse(),
   }) {
     if (unauthenticated != null) {
@@ -688,6 +730,6 @@ class _$unauthenticated implements unauthenticated {
   }
 }
 
-abstract class unauthenticated implements HomeState {
-  const factory unauthenticated() = _$unauthenticated;
+abstract class HomeStateUnauthenticated implements HomeState {
+  const factory HomeStateUnauthenticated() = _$HomeStateUnauthenticated;
 }

@@ -16,21 +16,20 @@ final _privateConstructorUsedError = UnsupportedError(
 
 /// @nodoc
 mixin _$HomeEvent {
-  String? get password => throw _privateConstructorUsedError;
-  String? get email => throw _privateConstructorUsedError;
+  String get id => throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(String? password, String? email) init,
+    required TResult Function(String id) init,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function(String? password, String? email)? init,
+    TResult Function(String id)? init,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(String? password, String? email)? init,
+    TResult Function(String id)? init,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -60,7 +59,7 @@ mixin _$HomeEvent {
 abstract class $HomeEventCopyWith<$Res> {
   factory $HomeEventCopyWith(HomeEvent value, $Res Function(HomeEvent) then) =
       _$HomeEventCopyWithImpl<$Res>;
-  $Res call({String? password, String? email});
+  $Res call({String id});
 }
 
 /// @nodoc
@@ -73,18 +72,13 @@ class _$HomeEventCopyWithImpl<$Res> implements $HomeEventCopyWith<$Res> {
 
   @override
   $Res call({
-    Object? password = freezed,
-    Object? email = freezed,
+    Object? id = freezed,
   }) {
     return _then(_value.copyWith(
-      password: password == freezed
-          ? _value.password
-          : password // ignore: cast_nullable_to_non_nullable
-              as String?,
-      email: email == freezed
-          ? _value.email
-          : email // ignore: cast_nullable_to_non_nullable
-              as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
@@ -96,7 +90,7 @@ abstract class _$$HomeEventInitCopyWith<$Res>
           _$HomeEventInit value, $Res Function(_$HomeEventInit) then) =
       __$$HomeEventInitCopyWithImpl<$Res>;
   @override
-  $Res call({String? password, String? email});
+  $Res call({String id});
 }
 
 /// @nodoc
@@ -111,18 +105,13 @@ class __$$HomeEventInitCopyWithImpl<$Res> extends _$HomeEventCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object? password = freezed,
-    Object? email = freezed,
+    Object? id = freezed,
   }) {
     return _then(_$HomeEventInit(
-      password: password == freezed
-          ? _value.password
-          : password // ignore: cast_nullable_to_non_nullable
-              as String?,
-      email: email == freezed
-          ? _value.email
-          : email // ignore: cast_nullable_to_non_nullable
-              as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
@@ -130,16 +119,14 @@ class __$$HomeEventInitCopyWithImpl<$Res> extends _$HomeEventCopyWithImpl<$Res>
 /// @nodoc
 
 class _$HomeEventInit implements HomeEventInit {
-  const _$HomeEventInit({this.password, this.email});
+  const _$HomeEventInit({required this.id});
 
   @override
-  final String? password;
-  @override
-  final String? email;
+  final String id;
 
   @override
   String toString() {
-    return 'HomeEvent.init(password: $password, email: $email)';
+    return 'HomeEvent.init(id: $id)';
   }
 
   @override
@@ -147,15 +134,12 @@ class _$HomeEventInit implements HomeEventInit {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$HomeEventInit &&
-            const DeepCollectionEquality().equals(other.password, password) &&
-            const DeepCollectionEquality().equals(other.email, email));
+            const DeepCollectionEquality().equals(other.id, id));
   }
 
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(password),
-      const DeepCollectionEquality().hash(email));
+  int get hashCode =>
+      Object.hash(runtimeType, const DeepCollectionEquality().hash(id));
 
   @JsonKey(ignore: true)
   @override
@@ -165,27 +149,27 @@ class _$HomeEventInit implements HomeEventInit {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(String? password, String? email) init,
+    required TResult Function(String id) init,
   }) {
-    return init(password, email);
+    return init(id);
   }
 
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function(String? password, String? email)? init,
+    TResult Function(String id)? init,
   }) {
-    return init?.call(password, email);
+    return init?.call(id);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(String? password, String? email)? init,
+    TResult Function(String id)? init,
     required TResult orElse(),
   }) {
     if (init != null) {
-      return init(password, email);
+      return init(id);
     }
     return orElse();
   }
@@ -220,13 +204,10 @@ class _$HomeEventInit implements HomeEventInit {
 }
 
 abstract class HomeEventInit implements HomeEvent {
-  const factory HomeEventInit({final String? password, final String? email}) =
-      _$HomeEventInit;
+  const factory HomeEventInit({required final String id}) = _$HomeEventInit;
 
   @override
-  String? get password;
-  @override
-  String? get email;
+  String get id;
   @override
   @JsonKey(ignore: true)
   _$$HomeEventInitCopyWith<_$HomeEventInit> get copyWith =>

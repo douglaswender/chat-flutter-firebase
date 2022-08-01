@@ -67,7 +67,8 @@ class DefaultFirebaseOptions {
     messagingSenderId: '751879640259',
     projectId: 'fern-d8b41',
     storageBucket: 'fern-d8b41.appspot.com',
-    iosClientId: '751879640259-8iik5cq0rpvq2lbap5r9dgviiptakira.apps.googleusercontent.com',
+    iosClientId:
+        '751879640259-8iik5cq0rpvq2lbap5r9dgviiptakira.apps.googleusercontent.com',
     iosBundleId: 'com.example.fern',
   );
 
@@ -77,7 +78,8 @@ class DefaultFirebaseOptions {
     messagingSenderId: '751879640259',
     projectId: 'fern-d8b41',
     storageBucket: 'fern-d8b41.appspot.com',
-    iosClientId: '751879640259-8iik5cq0rpvq2lbap5r9dgviiptakira.apps.googleusercontent.com',
+    iosClientId:
+        '751879640259-8iik5cq0rpvq2lbap5r9dgviiptakira.apps.googleusercontent.com',
     iosBundleId: 'com.example.fern',
   );
 }

@@ -22,7 +22,7 @@ class _ChatPageState extends State<ChatPage> {
               itemBuilder: (context, index) => ListTile(
                 title: Text(
                   widget.chat.messages[index].text,
-                  textAlign: widget.chat.messages[index].send
+                  textAlign: widget.chat.messages[index].sender
                       ? TextAlign.end
                       : TextAlign.start,
                 ),
