@@ -24,13 +24,9 @@ class ChatDatasourceImpl extends ChatDatasource {
       }
     });
 
-    print((await data.elementAt(0)).length);
-
     if ((await data.elementAt(0)).isEmpty) {
-      print('empty');
       return const Stream.empty();
     } else {
-      print('a lot of data');
       return data;
     }
   }
